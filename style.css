@@ -1,0 +1,129 @@
+*,::after,::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+/* The three boxes displayed in Flexbox */
+.boxes {
+  position: relative;
+  max-height: 100vh;
+  min-height: 80vh;
+  width: 25vw;
+  color: whitesmoke;
+  line-height: 4vh;
+}
+.boxes img {
+  margin: 7vh 0vw 2vh 4vw;
+}
+.boxes h2 {
+  margin: 2vh 0vw 2vh 4vw;
+  text-transform: uppercase;
+  font-family: Lexend Deca, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: -3px;
+}
+.boxes p {
+  margin: 6vh 0vw 2vh 4vw;
+  padding-right: 3vw;
+  line-height: 6vh;
+  font-family: Big Shoulders display;
+  font-weight: 700;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+/* The different cars */
+.sedans {
+  background-color: hsl(31, 77%, 52%);
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+.suv {
+  background-color: hsl(184, 100%, 22%);
+}
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+/* The button on the bottom of the card */
+.sedans button {
+  color: hsl(31, 77%, 52%);
+}
+.suv button {
+  color: hsl(184, 100%, 22%);
+}
+.luxury button {
+  color: hsl(179, 100%, 13%);
+}
+button {
+  outline: none;
+  border: 3px solid white;
+  padding: 13px 35px;
+  border-radius: 99999px;
+  margin: 6vh 0vw 2vh 4vw;
+  position: absolute;
+  top: 70%;
+  text-align: center;
+  font-size: 13px;
+  background-color: whitesmoke;
+  transition: color, background-color 0.5s ease-in-out;
+  font-family: Lexend Deca, sans-serif;
+}
+button:hover {
+  color: white;
+  background-color: transparent;
+}
+
+/* The footer section */
+footer {
+  text-align: center;
+  font-family: Lexend Deca, sans-serif;
+  color: black;
+}
+a {
+  text-decoration: none;
+}
+
+/* Medias Queries */
+@media screen and (max-width: 980px) {
+  .boxes {
+    width: 100%;
+  }
+  .container {
+    flex-direction: column;
+    padding: 70px 250px;
+  }
+  .sedans {
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 0px;
+  }
+  .luxury {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 7px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .boxes {
+    width: 80%;
+  }
+  .container {
+    padding: 25px 50px;
+  }
+}
+@media screen and (max-width: 360px){
+  .boxes {
+    width: 90%;
+  }
+  .container {
+    padding: 15px 50px;
+  }
+}
